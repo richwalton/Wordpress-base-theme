@@ -114,7 +114,7 @@ function dealer_models() {
 
 add_action('init', 'dealer_models');
 
-//Ajax Form -native without a form plugin without validation --*****
+//Ajax Form -native without a form plugin without validation -- experiment but better to use a plugin --*****
 
 add_action('wp_ajax_enquiry', 'enquiry_form');
 add_action('wp_ajax_nopriv_enquiry', 'enquiry_form');
