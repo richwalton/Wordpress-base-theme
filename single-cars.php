@@ -16,16 +16,19 @@
                     <?php wp_link_pages();?>
             </div>
             <div class="col-lg-6">
+
+            <?php get_template_part('includes/form', 'enquiry');?>   
+
                 <ul>
                     <li>
                         Color: <?php the_field('color');?>
                     </li>
 
-                    <?php if (get_field('registration')):?>
+                    
                     <li>
                         Registration: <?php the_field('registration');?>
                     </li>
-                    <?php endif;?>
+                    
                 </ul>
             </div>
         </div>
