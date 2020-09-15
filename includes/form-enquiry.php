@@ -65,6 +65,7 @@
     var formdata = new FormData;
 
     formdata.append('action', 'enquiry');
+    formdata.append('nonce', '<?php echo wp_create_nonce('ajax-nonce');?>');
     formdata.append('enquiry', form);
 
     $.ajax(endpoint, {
@@ -80,11 +81,12 @@
             $('#success_message').text('Thanks for your enquiry').show();
             $('#enquiry').trigger('reset');
             $('#enquiry').fadeIn(3000);
-            $('#success_message').fadeOut(12000);
+            $('#success_message').fadeOut(10000);
         },
 
         error: function(err){
-            $('#error_message').text('Sorry please Try Again').show();
+           
+            alert(err.responseJSON.data);
         }
 
     })

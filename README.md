@@ -1,0 +1,1 @@
+Wordpress simple base theme to work on.
